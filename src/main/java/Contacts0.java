@@ -7,6 +7,7 @@ public class Contacts0 {
         final Scanner SCANNER = new Scanner(System.in);
         System.out.println("|| ===================================================");
         System.out.println("|| ===================================================");
+        System.out.println("merge change");
         System.out.println("|| Contacts - Version 0.0");
         System.out.println("|| Welcome to Contacts!");
         System.out.println("|| ===================================================");
@@ -35,7 +36,7 @@ public class Contacts0 {
                         && !splitArgs[1].isEmpty()
                         && !splitArgs[2].isEmpty()) {
                     final String[] person1 = new String[3];
-                    final int indexOfPhonePrefix = commandArgs.indexOf("p/");
+                     int indexOfPhonePrefix = commandArgs.indexOf("p/");
                     final int indexOfEmailPrefix = commandArgs.indexOf("e/");// name is leading substring up to first data prefix symbol
                     int indexOfFirstPrefix = Math.min(indexOfEmailPrefix, indexOfPhonePrefix);
                     person1[0] = commandArgs.substring(0, indexOfFirstPrefix).trim();
