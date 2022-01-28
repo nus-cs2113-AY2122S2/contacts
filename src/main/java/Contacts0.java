@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
-
+//asdasdasdasdasdasd
 public class Contacts0 {
-
+    public static final int MAX = 100;
     public static void main(String[] args) {
         final Scanner SCANNER = new Scanner(System.in);
         System.out.println("|| ===================================================");
@@ -10,7 +10,8 @@ public class Contacts0 {
         System.out.println("|| Contacts - Version 0.0");
         System.out.println("|| Welcome to Contacts!");
         System.out.println("|| ===================================================");
-        String[][] list = new String[100][3];
+
+        String[][] list = new String[MAX][3];
         int count = 0;
         while (true) {
             System.out.print("|| " + "Enter command: ");
@@ -62,7 +63,7 @@ public class Contacts0 {
                             && !person1[2].isEmpty() && person1[2].contains("@") ? person1 : null;
                 }
                 if (decodeResult == null) {
-                    feedback = String.format("Invalid command format: %1$s " + (System.lineSeparator() + "|| ") 
+                    feedback = String.format("Invalid command format: %1$s " + (System.lineSeparator() + "|| ")
                             + "%2$s", "add", String.format("%1$s: %2$s", "add", "Adds a person to contacts.") + (System.lineSeparator() + "|| ")
                             + String.format("\tParameters: %1$s", "NAME "
                             + "p/" + "PHONE_NUMBER "
@@ -92,7 +93,7 @@ public class Contacts0 {
                 feedback = String.format("%1$d persons found!", count);
                 break;
             case "clear":
-                list = new String[100][3];
+                list = new String[MAX][3];
                 count = 0;
                 feedback = "Contacts have been cleared!";
                 break;
@@ -106,9 +107,9 @@ public class Contacts0 {
                         + String.format("\tExample: %1$s", "list") + (System.lineSeparator() + "|| ")) + (System.lineSeparator() + "|| ")
                         + (String.format("%1$s: %2$s", "clear", "Clears all contacts.") + (System.lineSeparator() + "|| ")
                         + String.format("\tExample: %1$s", "clear") + (System.lineSeparator() + "|| ")) + (System.lineSeparator() + "|| ")
-                        + (String.format("%1$s: %2$s", "exit", "Exits the program.")+ (System.lineSeparator() + "|| ")
+                        + (String.format("%1$s: %2$s", "exit", "Exits the program.") + (System.lineSeparator() + "|| ")
                         + String.format("\tExample: %1$s", "exit")) + (System.lineSeparator() + "|| ") + (System.lineSeparator() + "|| ")
-                        + (String.format("%1$s: %2$s", "help", "Shows program usage instructions.")+ (System.lineSeparator() + "|| ")
+                        + (String.format("%1$s: %2$s", "help", "Shows program usage instructions.") + (System.lineSeparator() + "|| ")
                         + String.format("\tExample: %1$s", "help"));
                 break;
             case "exit":
@@ -120,7 +121,7 @@ public class Contacts0 {
                 System.exit(0);
                 // Fallthrough
             default:
-                feedback = String.format("Invalid command format: %1$s " + (System.lineSeparator() + "|| ") 
+                feedback = String.format("Invalid command format: %1$s " + (System.lineSeparator() + "|| ")
                         + "%2$s", commandType, (String.format("%1$s: %2$s", "add", "Adds a person to contacts.") + (System.lineSeparator() + "|| ")
                         + String.format("\tParameters: %1$s", "NAME "
                         + "p/" + "PHONE_NUMBER "
@@ -140,7 +141,7 @@ public class Contacts0 {
                         + String.format("\tExample: %1$s", "help")));
                 break;
             }
-            for (String m : new String[]{feedback, "==================================================="}) {
+            for (String m : new String[]{feedback, "===================================================="}) {
                 System.out.println("|| " + m);
             }
         }
